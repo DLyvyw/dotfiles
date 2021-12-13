@@ -1,0 +1,279 @@
+{
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005f5f",
+        "statusBar.noFolderBackground": "#005f5f",
+        "statusBar.debuggingBackground": "#005f5f"
+    },
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "window.titleBarStyle": "custom",
+    "editor.fontSize": 10,
+    "debug.console.fontSize": 10,
+    "terminal.integrated.fontSize": 11,
+    "markdown.preview.fontSize": 10,
+    "editor.smoothScrolling": true,
+    "diffEditor.codeLens": true,
+    "files.insertFinalNewline": true,
+    "workbench.editor.scrollToSwitchTabs": true,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb",
+        "git-rebase-todo": "gitlens.rebase"
+    },
+    "debug.inlineValues": true,
+    "debug.onTaskErrors": "debugAnyway",
+    "terminal.integrated.tabs.enabled": true,
+    "editor.cursorStyle": "line",
+    "editor.insertSpaces": false,
+    "editor.lineNumbers": "on",
+    "editor.wordWrap": "off",
+    "search.searchEditor.doubleClickBehaviour": "openLocationToSide",
+    "search.mode": "reuseEditor",
+    "editor.inlineSuggest.enabled": true,
+    "editor.bracketPairColorization.enabled": true,
+    "notebook.lineNumbers": "on",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "terminal.integrated.fontFamily": "NotoSansMono Nerd Font",
+    "go.toolsManagement.autoUpdate": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "javascript.inlayHints.enumMemberValues.enabled": true,
+    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "javascript.inlayHints.parameterNames.enabled": "all",
+    "typescript.inlayHints.enumMemberValues.enabled": true,
+    "typescript.implementationsCodeLens.enabled": true,
+    "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "typescript.inlayHints.parameterNames.enabled": "all",
+    "typescript.inlayHints.parameterTypes.enabled": true,
+    "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "typescript.inlayHints.variableTypes.enabled": true,
+    "javascript.inlayHints.parameterTypes.enabled": true,
+    "testExplorer.useNativeTesting": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.codeLens.enabled": false,
+    "gitlens.statusBar.enabled": false,
+    "vim.smartRelativeLine": true,
+    "workbench.sideBar.location": "right",
+    "vim.showMarksInGutter": true,
+    "deno.codeLens.implementations": true,
+    "deno.codeLens.references": true,
+    "deno.codeLens.referencesAllFunctions": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.guides.bracketPairs": "active",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "diffEditor.renderSideBySide": false,
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": true,
+    "workbench.experimental.layoutControl.enabled": true,
+    "vim.easymotion": true,
+    "vim.replaceWithRegister": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "D"
+            ],
+            "commands": [
+                "editor.action.peekDefinition"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "commands": [
+                "editor.action.showDefinitionPreviewHover"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "u"
+            ],
+            "commands": [
+                "editor.action.referenceSearch.trigger"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "r"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "R"
+            ],
+            "commands": [
+                "editor.action.refactor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "."
+            ],
+            "commands": [
+                "editor.action.quickFix"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.gotoSymbol"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g"
+            ],
+            "commands": [
+                "workbench.action.showAllSymbols"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w"
+            ],
+            "commands": [
+                ":",
+                "u",
+                "p"
+            ]
+        },
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                ":",
+            ]
+        },
+        {
+            "before": [
+                ",",
+                "p"
+            ],
+            "after": [
+                "\"",
+                "0",
+                "p",
+            ]
+        },
+        {
+            "before": [
+                ",",
+                "P"
+            ],
+            "after": [
+                "\"",
+                "0",
+                "P",
+            ]
+        },
+        {
+            "before": [
+                "<up>",
+            ],
+            "after": [
+                "<C-w>",
+                "<up>",
+            ]
+        },
+        {
+            "before": [
+                "<down>",
+            ],
+            "after": [
+                "<C-w>",
+                "<down>",
+            ]
+        },
+        {
+            "before": [
+                "<left>",
+            ],
+            "after": [
+                "<C-w>",
+                "<left>",
+            ]
+        },
+        {
+            "before": [
+                "<right>",
+            ],
+            "after": [
+                "<C-w>",
+                "<right>",
+            ]
+        },
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                ":",
+            ]
+        },
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-j>": false,
+        "<C-b>": false,
+        "<C-k>": false,
+    },
+    "vim.visualstar": true,
+    "vim.gdefault": false,
+    "editor.cursorSurroundingLines": 10
+}
