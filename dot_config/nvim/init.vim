@@ -4,12 +4,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
 Plug 'frazrepo/vim-rainbow'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
-"Plug 'ryanoasis/vim-devicons'
-"Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdcommenter'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'easymotion/vim-easymotion'
@@ -19,12 +16,6 @@ Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
 
-"set guifont=JetBrains\ Mono:h12
-"set guifont=Nato\ Mono:h12
-"set guifont=Fantasque\ Sans\ Mono:h14
-"set guifont=Hack\ Regular:h11
-"set guifont=DejaVuSansMono\ NF:h16
-"set guifont=FiraCode\ Nerd\ Font:h12
 set guifont=JetBrains\ Mono\ Nerd\ Font,DejaVu\ Sans\ Mono,Iosevka:h14
 let g:airline_powerline_fonts = 1
 
@@ -56,8 +47,6 @@ endif
 let g:rainbow_active = 1
 
 let g:airline#extensions#tabline#enabled = 1
-"let g:airline_theme='ayu_dark'
-"let g:airline_left_sep=''
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
@@ -65,9 +54,6 @@ let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline#extensions#tabline#buffer_idx_mode = 0
 let g:airline#extensions#tabline#buffer_nr_show = 1
-
-"let g:airline_right_sep='|'
-"let g:airline_section_z = 
 
 
 function! AirlineInit()
@@ -80,9 +66,6 @@ autocmd VimEnter * call AirlineInit()
 
 
 
-"let g:gruvbox_improved_warnings = 1
-"let g:gruvbox_italicize_strings=0
-"let g:gruvbox_improved_strings=1    
 
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
@@ -275,4 +258,3 @@ syntax on
 set tabstop=4
 set number
 colorscheme onedark
-"colorscheme gruvbox
