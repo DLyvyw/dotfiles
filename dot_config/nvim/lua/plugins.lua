@@ -9,21 +9,19 @@ return require('packer').startup(function()
 		}
 
 		-- LSP
-		use { 
+		use {
 				'neovim/nvim-lspconfig',
 				config = [[require('config.nvim_lspconfig')]],
 		}
-		
-		use { 
+
+		use {
 				'williamboman/nvim-lsp-installer',
-				
 		}
-		
+
 		-- cmp
 		use {
 			'hrsh7th/nvim-cmp',
 			config = [[require('config.nvim_cmp')]],
-			
 		}
 
 		-- telescope
@@ -32,15 +30,27 @@ return require('packer').startup(function()
 				requires = { {'nvim-lua/plenary.nvim'} },
 				config = [[require('config.telescope')]]
 		}
-		
-		use {
-			{ 'tpope/vim-fugitive', cmd = { 'Git', 'Gstatus', 'Gblame', 'Gpush', 'Gpull' }, disable = true },
-    		{ 'TimUntersberger/neogit', cmd = 'Neogit', config = [[require('config.neogit')]] },
-  		}
-  		
-  		-- rust 
+
+  		-- rust
   		use {
   			'simrat39/rust-tools.nvim',
   			config = [[require('config.rust_tools')]],
   		}
+
+		use {
+			 'crispgm/nvim-go',
+				requires = {
+					{'nvim-lua/popup.nvim'},
+					{'nvim-lua/plenary.nvim'}
+				},
+				config = [[require('config.nvim_go')]],
+				disable = true
+		}
+
+		use {
+				  'lewis6991/gitsigns.nvim',
+				requires = { 'nvim-lua/plenary.nvim' },
+				config = [[require('config.gitsigns')]],
+		}
+									-- }
 end)
