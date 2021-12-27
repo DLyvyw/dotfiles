@@ -12,6 +12,10 @@ return require('packer').startup(function()
     use {'neovim/nvim-lspconfig', config = [[require('config.nvim_lspconfig')]]}
 
     use {'williamboman/nvim-lsp-installer'}
+    use {'ray-x/navigator.lua', 
+		requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'},
+        config = [[require('config.navigator')]]
+		}
 
     -- cmp
     use {'hrsh7th/nvim-cmp', config = [[require('config.nvim_cmp')]]}
@@ -42,6 +46,17 @@ return require('packer').startup(function()
     use {
         'kyazdani42/nvim-web-devicons',
         config = [[require('config.nvim_web_devicons')]]
+    }
+
+    use { 'joshdick/onedark.vim' }
+    use { 'vim-airline/vim-airline' }
+    use { 'frazrepo/vim-rainbow' }
+    use { 'preservim/nerdtree' }
+    use { 'easymotion/vim-easymotion' }
+	
+	use { 'leoluz/nvim-dap-go' , 
+		requires = { 'mfussenegger/nvim-dap' },
+		config = [[require('config.nvim_dap')]]
     }
 
 end)

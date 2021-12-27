@@ -5,7 +5,6 @@ telescope.setup {
     defaults = {
         layout_strategy = 'flex',
         scroll_strategy = 'cycle',
-        mappings = {i = {["<esc>"] = actions.close}}
     },
     extensions = {
         --  frecency = { workspaces = { exo = '/home/wil/projects/research/exoplanet' } },
@@ -21,7 +20,19 @@ telescope.setup {
         lsp_code_actions = {theme = 'dropdown'},
         lsp_definitions = {theme = 'dropdown'},
         lsp_implementations = {theme = 'dropdown'},
-        buffers = {sort_lastused = true, previewer = false}
+	    buffers = {
+		  sort_lastused = true,
+		  theme = "dropdown",
+		  previewer = false,
+		  mappings = {
+			i = {
+			  ["<C-d>"] = require("telescope.actions").delete_buffer, -- FIXME
+			},
+			n = {
+			  ["<C-d>"] = require("telescope.actions").delete_buffer, -- FIXME
+			}
+		  }
+		}
     }
 }
 
