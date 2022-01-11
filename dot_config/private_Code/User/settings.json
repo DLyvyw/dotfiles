@@ -24,9 +24,9 @@
     "editor.guides.bracketPairs": "active",
     "editor.inlineSuggest.enabled": true,
     "editor.insertSpaces": false,
-    "editor.lineNumbers": "on",
+    "editor.lineNumbers": "relative",
     "editor.smoothScrolling": true,
-    "editor.suggestSelection": "first",
+    "editor.suggestSelection": "recentlyUsedByPrefix",
     "editor.wordWrap": "off",
 
     "terminal.integrated.fontSize": 11,
@@ -45,11 +45,7 @@
     "diffEditor.renderSideBySide": false,
 
     "files.insertFinalNewline": true,
-
-    "gitlens.codeLens.enabled": false,
-    "gitlens.currentLine.enabled": false,
     "gitlens.hovers.currentLine.over": "line",
-    "gitlens.statusBar.enabled": false,
 
     "go.toolsManagement.autoUpdate": true,
 
@@ -61,8 +57,6 @@
     "markdown.preview.fontSize": 10,
 
     "notebook.lineNumbers": "on",
-
-    "search.mode": "reuseEditor",
 
     "search.searchEditor.doubleClickBehaviour": "openLocationToSide",
 
@@ -77,6 +71,7 @@
     "typescript.inlayHints.variableTypes.enabled": true,
 
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.list.automaticKeyboardNavigation": false,
 
     "vim.showMarksInGutter": true,
     "vim.smartRelativeLine": true,
@@ -295,4 +290,11 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+    "vscode-neovim.textDecorationsAtTop": false,
+    "editor.scrollBeyondLastLine": false,
+    "gitlens.statusBar.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.enabled": false,
 }

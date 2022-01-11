@@ -1,14 +1,6 @@
 // Place your key bindings in this file to overwrite the defaults
 [
     {
-        "key": "ctrl+j",
-        "command": "workbench.action.navigateBack"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "workbench.action.navigateForward"
-    },
-    {
         "key": "ctrl+right",
         "command": "-cursorWordEndRight",
         "when": "textInputFocus"
@@ -27,9 +19,93 @@
         "command": "-workbench.action.nextEditor"
     },
     {
+        "key": "ctrl+h",
+        "command": "-editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.previousEditorInGroup"
+    },
+    {
         "key": "ctrl+alt+q",
         "command": "workbench.action.focusNextGroup"
     },
+    {
+        "key": "j",
+        "command": "list.focusDown",
+        "when": "listFocus"
+    },
+    {
+        "key": "k",
+        "command": "list.focusUp",
+        "when": "listFocus"
+    },
+    {
+        "key": "enter",
+        "command": "list.select",
+        "when": "explorerViewletVisible && filesExplorerFocus"
+    },
+    /*
+    {
+        "key": "o",
+        "command": "list.toggleExpand",
+        "when": "listFocus"
+    },
+    {
+        "key": "l",
+        "command": "breadcrumbs.focusNext",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    {
+        "key": "l",
+        "command": "breadcrumbs.focusNextWithPicker",
+        "when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus"
+    },
+    {
+        "key": "h",
+        "command": "breadcrumbs.focusPrevious",
+        "when": "breadcrumbsActive && breadcrumbsVisible"
+    },
+    */
+    {
+        "key": "h",
+        "command": "breadcrumbs.focusPreviousWithPicker",
+        "when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "-breadcrumbs.focusPreviousWithPicker",
+        "when": "breadcrumbsActive && breadcrumbsVisible && listFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeGroup",
+        "when": "activeEditorGroupEmpty && multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.terminal.killEditor",
+        "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated && resourceScheme == 'vscode-terminal' || terminalEditorFocus && terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
+    },
+    {
+        "key": "shift+o",
+        "command": "list.collapseAll",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    /*
     {
         "key": "ctrl+w",
         "command": "-workbench.action.terminal.killEditor",
@@ -43,6 +119,10 @@
         "key": "ctrl+w",
         "command": "-workbench.action.closeGroup",
         "when": "activeEditorGroupEmpty && multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+w ctrl+w",
+        "command": "workbench.action.focusNextGroup"
     },
     {
         "key": "ctrl+shift+w",
@@ -77,30 +157,8 @@
         "command": "-workbench.action.reopenClosedEditor"
     },
     {
-        "key": "ctrl+h",
-        "command": "-editor.action.startFindReplaceAction",
-        "when": "editorFocus || editorIsOpen"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.nextEditor"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.nextEditorInGroup"
-    },
-    {
-        "key": "ctrl+h",
-        "command": "workbench.action.previousEditorInGroup"
-    },
-    {
         "key": "ctrl+k ctrl+pageup",
         "command": "-workbench.action.previousEditorInGroup"
-    },
-    {
-        "key": "ctrl+w",
-        "command": "extension.vim_ctrl+w",
-        "when": "vim.active && vim.use<C-w> && !inDebugRepl"
     },
     {
         "key": "ctrl+w",
@@ -110,10 +168,6 @@
     {
         "key": "ctrl+w m",
         "command": "workbench.action.maximizeEditor"
-    },
-    {
-        "key": "ctrl+w ctrl+w",
-        "command": "workbench.action.focusNextGroup"
     },
     {
         "key": "ctrl+w s",
@@ -152,4 +206,5 @@
         "command": "workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"
     }
+    */
 ]
