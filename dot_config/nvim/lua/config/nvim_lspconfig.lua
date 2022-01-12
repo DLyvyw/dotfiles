@@ -9,12 +9,11 @@ local on_attach = function(client, bufnr)
 
     aerial.on_attach(client, bufnr)
 
--- Repeat this for each language server you have configured
+    -- Repeat this for each language server you have configured
 
     -- Enable completion triggered by <c-x><c-o>
     buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 end
-
 
 -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -47,15 +46,12 @@ nvim_lsp.sumneko_lua.setup {
     }
 }
 
-
---[[
 nvim_lsp.efm.setup {
-init_options = {documentFormatting = true},
-settings = {
-rootMarkers = {".git/"},
-languages = {
-lua = {{formatCommand = "lua-format -i", formatStdin = true}}
+    init_options = {documentFormatting = true},
+    settings = {
+        rootMarkers = {".git/"},
+        languages = {
+            lua = {{formatCommand = "lua-format -i", formatStdin = true}}
+        }
+    }
 }
-}
-}
---]]
