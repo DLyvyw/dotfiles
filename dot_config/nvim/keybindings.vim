@@ -67,6 +67,9 @@ else
     nmap <silent> <Leader>fs :Telescope lsp_document_symbols<CR>
     nmap <silent> <Leader>fg :Telescope live_grep<CR>
     nmap <silent> <Leader>fr :lua require("telescope").extensions.file_browser.file_browser({hidden=true, cwd=[[%:p:h]]})<CR>
+    nmap <silent> <Leader>fc :lua require('telescope.builtin').live_grep({additional_args = function(opts) return { '-g', '*.c', '-g', '*.h'} end })<CR> 
+    nmap <silent> <Leader>f] :lua require('telescope.builtin').tags({ctags_file='tags'})<CR>
+    
 endif
 
 

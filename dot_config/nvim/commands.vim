@@ -10,6 +10,7 @@ endfunction
 " user commands
 command! Scratch call Newscratch()
 command! CD :cd %:h
+command! CtagsUpdate :!ctags -R --totals --languages=C,C++ *  
 
 
 " auto commands

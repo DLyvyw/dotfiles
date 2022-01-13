@@ -5,6 +5,16 @@ telescope.setup {
     defaults = {
         layout_strategy = 'flex',
         scroll_strategy = 'cycle',
+        vimgrep_arguments = {
+            "rg",
+            "--color=never",
+            "--no-heading",
+            "--with-filename",
+            "--line-number",
+            "--column",
+            "--smart-case",
+            "--trim" -- add this value
+        }
     },
     extensions = {
         ["ui-select"] = {
@@ -37,7 +47,11 @@ telescope.setup {
 			  ["<C-d>"] = require("telescope.actions").delete_buffer, -- FIXME
 			}
 		  }
-		}
+		} , pickers = {
+            find_files = {
+              find_command = { "fd", "--type", "f", "--full-path", "-E", ".git", "--strip-cwd-prefix" }
+            },
+          }
     }
 }
 
