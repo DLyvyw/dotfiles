@@ -124,4 +124,6 @@ require('packer').startup(function()
         disable = embedded
     }
 
+    use {"TaDaa/vimade"}
+
 end)

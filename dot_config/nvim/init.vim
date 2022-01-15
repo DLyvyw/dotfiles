@@ -3,9 +3,7 @@
 " :help completeopt
 " menuone: popup even when there's only one match
 " noinsert: Do not insert text until a selection is made
-" noselect: Do not select, force user to select one from the menu
-set completeopt=menuone,noinsert,noselect
-
+" noselect: Do not select, force user to select one from the menu set completeopt=menuone,noinsert,noselect
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
@@ -26,6 +24,7 @@ set shiftwidth  =4
 set expandtab
 set autoindent
 
+set ignorecase
 set smartcase
 
 " Shift to the next round tab stop. 
@@ -36,17 +35,20 @@ set shiftwidth=4
 set path+=**
 
 if !exists('g:vscode')
-    let g:rainbow_active = 1
 
     "set guifont=JetBrains\ Mono\ Nerd\ Font,DejaVu\ Sans\ Mono,Iosevka:h18
     "set guifont=JetBrains\ Mono:h8
     set guifont=Monospace:h10
+
+
+    let g:rainbow_active = 1
+
     let g:airline_powerline_fonts = 1
 
     let g:rustfmt_autosave = 1
 
     let g:neovide_refresh_rate=60
-    "let g:neovide_transparency=1
+    let g:neovide_transparency=0.95
     let g:neovide_cursor_antialiasing=v:true
 
 
@@ -60,11 +62,13 @@ if !exists('g:vscode')
         hi LineNr ctermbg=NONE guibg=NONE
     endif
 
+
     if (has("nvim"))
       "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
       let $NVIM_TUI_ENABLE_TRUE_COLOR=1
       let $NeovideMultiGrid =1
     endif
+
 
     " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
     " unicode characters in the file autoload/float.vim

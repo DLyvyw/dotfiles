@@ -11,6 +11,9 @@ endfunction
 command! Scratch call Newscratch()
 command! CD :cd %:h
 command! CtagsUpdate :!ctags -R --totals --languages=C,C++ *  
+command! EditVimInit :e $MYVIMRC
+command! LoadVimInit :so $MYVIMRC
+command! EditPlugins :e ~/.config/nvim/lua/plugins.lua
 
 
 " auto commands
