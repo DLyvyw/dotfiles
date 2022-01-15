@@ -35,8 +35,6 @@ set shiftwidth=4
 set path+=**
 
 lua require('plugins')
-runtime keybindings.vim
-runtime commands.vim
 
 if !exists('g:vscode')
 
@@ -102,3 +100,5 @@ if !exists('g:vscode')
     colorscheme onedark
 endif
 
+runtime keybindings.vim
+runtime commands.vim

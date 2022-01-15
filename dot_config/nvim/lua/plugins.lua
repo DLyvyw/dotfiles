@@ -17,42 +17,28 @@ require('packer').startup({function()
     use {
         'nvim-telescope/telescope.nvim',
         requires = {{'nvim-lua/plenary.nvim'}},
-        config = [[require('config.telescope')]],
     }
     use {'nvim-telescope/telescope-ui-select.nvim'}
     use {'nvim-telescope/telescope-file-browser.nvim'}
 
     -- themes
-    use { 'joshdick/onedark.vim', }
+    use { 'joshdick/onedark.vim' }
 
     -- icons
-    use {
-        'kyazdani42/nvim-web-devicons',
-        config = [[require('config.nvim_web_devicons')]],
-    }
+    use { 'kyazdani42/nvim-web-devicons' }
 
     -- treesiter
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        config = [[require('config.nvim_treesitter')]]
-    }
+    use { 'nvim-treesitter/nvim-treesitter' }
 
     -- pairs
-    use {'p00f/nvim-ts-rainbow'}
-    use {
-        'windwp/nvim-autopairs',
-        config = [[require('config.autopairs')]]
-    }
-    use {
-        "lukas-reineke/indent-blankline.nvim",
-        config = [[require('config.indent_blankline')]],
-    }
+    use {'p00f/nvim-ts-rainbow' }
+
+    use { 'windwp/nvim-autopairs' }
+
+    use { "lukas-reineke/indent-blankline.nvim" }
 
     -- LSP
-    use {
-        'neovim/nvim-lspconfig',
-        config = [[require('config.nvim_lspconfig')]],
-    }
+    use { 'neovim/nvim-lspconfig'}
 
     use { 'williamboman/nvim-lsp-installer' }
 
@@ -61,74 +47,51 @@ require('packer').startup({function()
     use {
         'ray-x/navigator.lua',
         requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'},
-        config = [[require('config.navigator')]],
     }
 
     -- symbols outline
     use { 'simrat39/symbols-outline.nvim' }
 
-    use {
-        'stevearc/aerial.nvim',
-        config = [[require('config.aerial')]],
-    }
+    use { 'stevearc/aerial.nvim' }
 
     -- key helpers
-    use {
-        "folke/which-key.nvim",
-        config = [[require('config.which_key')]]
-    }
+    use { "folke/which-key.nvim" }
 
     -- cmp
-    use {
-        'hrsh7th/nvim-cmp',
-        config = [[require('config.nvim_cmp')]],
-    }
+    use { 'hrsh7th/nvim-cmp' }
     use { 'hrsh7th/cmp-nvim-lsp' }
     use { 'hrsh7th/vim-vsnip' }
     use { 'hrsh7th/vim-vsnip-integ' }
 
-
     -- rust
-    use {
-        'simrat39/rust-tools.nvim',
-        config = [[require('config.rust_tools')]]
-    }
+    use { 'simrat39/rust-tools.nvim' }
 
     -- git
     use {
         'lewis6991/gitsigns.nvim',
         requires = {'nvim-lua/plenary.nvim'},
-        config = [[require('config.gitsigns')]],
     }
 
     -- lualine
     use {
         'nvim-lualine/lualine.nvim',
         requires = {'kyazdani42/nvim-web-devicons'},
-        config = [[require('config.lualine')]],
     }
 
     -- explorer
     use {
         'kyazdani42/nvim-tree.lua',
-        requires = {
-            'kyazdani42/nvim-web-devicons' -- optional, for file icon
-        },
-        config = [[require('config.nvim_tree')]],
+        requires = { 'kyazdani42/nvim-web-devicons' }
     } 
 
     -- DAP
     use {
         "rcarriga/nvim-dap-ui",
         requires = {"mfussenegger/nvim-dap"},
-        config = [[require('config.nvim_dap_ui')]],
     }
 
     -- terminal
-    use {
-        "akinsho/toggleterm.nvim",
-        config = [[require('config.toggleterm')]],
-    }
+    use { "akinsho/toggleterm.nvim", }
 
     -- fade inactive windows
     use {"TaDaa/vimade"}
@@ -144,32 +107,67 @@ config = {
 if not vim.g.vscode 
 then
     vim.cmd [[packadd aerial.nvim]]
-    vim.cmd [[packadd cmp-nvim-lsp]]
-    vim.cmd [[packadd gitsigns.nvim]]
-    vim.cmd [[packadd guihua.lua]]
-    vim.cmd [[packadd indent-blankline.nvim]]
-    vim.cmd [[packadd lualine-lsp-progress]]
-    vim.cmd [[packadd lualine.nvim]]
-    vim.cmd [[packadd navigator.lua]]
-    vim.cmd [[packadd nvim-autopairs]]
+    require('config.aerial')
+
     vim.cmd [[packadd nvim-cmp]]
+    vim.cmd [[packadd cmp-nvim-lsp]]
+    require('config.nvim_cmp')
+
+    vim.cmd [[packadd nvim-treesitter]]
+    require('config.nvim_treesitter')
+
+    vim.cmd [[packadd nvim-web-devicons]]
+    require('config.nvim_web_devicons')
+
+    vim.cmd [[packadd nvim-lspconfig ]]
+    require('config.nvim_lspconfig')
+
+    vim.cmd [[packadd nvim-lsp-installer]]
+    vim.cmd [[packadd plenary.nvim]]
+    vim.cmd [[packadd guihua.lua]]
+
+
+    vim.cmd [[packadd gitsigns.nvim]]
+    require('config.gitsigns')
+
+    vim.cmd [[packadd indent-blankline.nvim]]
+    require('config.indent_blankline')
+
+    vim.cmd [[packadd lualine.nvim]]
+    vim.cmd [[packadd lualine-lsp-progress]]
+    require('config.lualine')
+
+    vim.cmd [[packadd navigator.lua]]
+    require('config.navigator')
+
+    vim.cmd [[packadd nvim-autopairs]]
+    require('config.autopairs')
+
+
     vim.cmd [[packadd nvim-dap]]
     vim.cmd [[packadd nvim-dap-ui]]
-    vim.cmd [[packadd nvim-lsp-installer]]
+    require('config.nvim_dap_ui')
+
     vim.cmd [[packadd nvim-tree.lua]]
-    vim.cmd [[packadd nvim-treesitter]]
+    require('config.nvim_tree')
+
     vim.cmd [[packadd nvim-ts-rainbow]]
-    vim.cmd [[packadd nvim-web-devicons]]
     vim.cmd [[packadd onedark.vim]]
-    vim.cmd [[packadd plenary.nvim]]
     vim.cmd [[packadd rust-tools.nvim]]
+    require('config.rust_tools')
     vim.cmd [[packadd symbols-outline.nvim]]
-    vim.cmd [[packadd telescope-file-browser.nvim]]
+
     vim.cmd [[packadd telescope.nvim]]
+    vim.cmd [[packadd telescope-file-browser.nvim]]
     vim.cmd [[packadd telescope-ui-select.nvim]]
+    require('config.telescope')
+
     vim.cmd [[packadd toggleterm.nvim]]
+    require('config.toggleterm')
+
     vim.cmd [[packadd vimade]]
     vim.cmd [[packadd vim-vsnip]]
     vim.cmd [[packadd vim-vsnip-integ]]
     vim.cmd [[packadd which-key.nvim]]
+    require('config.which_key')
 end
