@@ -34,6 +34,10 @@ set shiftwidth=4
 
 set path+=**
 
+lua require('plugins')
+runtime keybindings.vim
+runtime commands.vim
+
 if !exists('g:vscode')
 
     "set guifont=JetBrains\ Mono\ Nerd\ Font,DejaVu\ Sans\ Mono,Iosevka:h18
@@ -98,7 +102,3 @@ if !exists('g:vscode')
     colorscheme onedark
 endif
 
-
-lua require('plugins')
-runtime keybindings.vim
-runtime commands.vim

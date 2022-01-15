@@ -9,7 +9,6 @@
         "*.ipynb": "jupyter.notebook.ipynb",
         "git-rebase-todo": "gitlens.rebase"
     },
-    "workbench.iconTheme": "material-icon-theme",
     "workbench.experimental.layoutControl.enabled": true,
     "workbench.sideBar.location": "right",
 
