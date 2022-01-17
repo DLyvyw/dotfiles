@@ -12,13 +12,21 @@ set $left h
 set $down j
 set $up k
 set $right l
-# Your preferred terminal emulator
-set $term alacritty
+# Your preferred 
+#
+    # main 
+    set $term alacritty
+    set $sway-launcher sway-launcher-desktop
+
+    #rpi
+    #set $term LIBGL_ALWAYS_SOFTWARE=1 alacritty
+    #set $sway-launcher /home/liv/ws/sway-launcher-desktop/sway-launcher-desktop.sh
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt, border pixel 10
-set $menu exec $term --class=launcher -e sway-launcher-desktop
+set $menu $term --class=launcher -e $sway-launcher
 
 ### Output configuration
 #
@@ -28,7 +36,6 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 ### UI
 #
 #font pango:Cantarell 14px
-gaps inner 5
 default_border pixel 3
 
 #
@@ -42,10 +49,10 @@ default_border pixel 3
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
+ exec swayidle -w \
+          timeout 300 'swaylock -f -c 000000' \
+          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+          before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -87,9 +94,13 @@ default_border pixel 3
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
+    
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+    #lock
+    bindsym $mod+alt+l exec swaylock -c 0000
 #
 # Moving around:
 #
@@ -141,6 +152,7 @@ default_border pixel 3
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+    bindsym $mod+tab workspace back_and_forth
 #
 # Layout stuff:
 #
@@ -203,6 +215,8 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+
+
 #
 # Status Bar:
 #
@@ -222,5 +236,7 @@ bar {
 
     swaybar_command waybar
 }
+
+exec wl-paste -t text --watch clipman store --no-persist
 
 include /etc/sway/config.d/*

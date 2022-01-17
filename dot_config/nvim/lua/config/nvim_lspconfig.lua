@@ -21,12 +21,13 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- The following example advertise capabilities to `clangd`.
 
-nvim_lsp.gopls.setup {
+nvim_lsp.rust_analyzer.setup {
     capabilities = capabilities,
     on_attach = on_attach,
     flags = {debounce_text_changes = 150}
 }
-nvim_lsp.rust_analyzer.setup {
+
+nvim_lsp.gopls.setup {
     capabilities = capabilities,
     on_attach = on_attach,
     flags = {debounce_text_changes = 150}

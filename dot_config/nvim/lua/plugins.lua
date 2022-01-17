@@ -1,6 +1,5 @@
 
 vim.cmd [[packadd packer.nvim]]
-vim.cmd [[packadd lightspeed.nvim]]
 
 require('packer').startup({function()
 
@@ -103,6 +102,8 @@ config = {
         open_fn = require('packer.util').float,
     }
 } })
+
+vim.cmd [[packadd lightspeed.nvim]]
 
 if not vim.g.vscode 
 then
