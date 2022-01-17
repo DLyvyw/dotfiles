@@ -1,3 +1,4 @@
+require "target_specific"
 
 vim.cmd [[packadd packer.nvim]]
 
@@ -166,7 +167,10 @@ then
     vim.cmd [[packadd toggleterm.nvim]]
     require('config.toggleterm')
 
-    vim.cmd [[packadd vimade]]
+    if not(vim.g.target_is_rpi) then
+        vim.cmd [[packadd vimade]]
+    end
+
     vim.cmd [[packadd vim-vsnip]]
     vim.cmd [[packadd vim-vsnip-integ]]
     vim.cmd [[packadd which-key.nvim]]

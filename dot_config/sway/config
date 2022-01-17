@@ -2,6 +2,8 @@
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
+#
+include target_specific
 
 ### Variables
 #
@@ -14,13 +16,10 @@ set $up k
 set $right l
 # Your preferred 
 #
-    # main 
-    set $term alacritty
-    set $sway-launcher sway-launcher-desktop
 
-    #rpi
-    #set $term LIBGL_ALWAYS_SOFTWARE=1 alacritty
-    #set $sway-launcher /home/liv/ws/sway-launcher-desktop/sway-launcher-desktop.sh
+# from file target_specific 
+#set $term alacritty
+#set $sway-launcher sway-launcher-desktop
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened

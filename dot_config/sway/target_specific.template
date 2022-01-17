@@ -1,0 +1,5 @@
+
+# main 
+set $term alacritty
+set $sway-launcher sway-launcher-desktop
+

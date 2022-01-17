@@ -27,32 +27,34 @@ nvim_lsp.rust_analyzer.setup {
     flags = {debounce_text_changes = 150}
 }
 
-nvim_lsp.gopls.setup {
-    capabilities = capabilities,
-    on_attach = on_attach,
-    flags = {debounce_text_changes = 150}
-}
+if not(vim.g.target_is_rpi) then
+    nvim_lsp.gopls.setup {
+        capabilities = capabilities,
+        on_attach = on_attach,
+        flags = {debounce_text_changes = 150}
+    }
 
-nvim_lsp.sumneko_lua.setup {
-    capabilities = capabilities,
-    on_attach = on_attach,
-    flags = {debounce_text_changes = 150},
-    settings = {
-        Lua = {
-            diagnostics = {
-                -- Get the language server to recognize the `vim` global
-                globals = {'vim', 'use'}
+    nvim_lsp.sumneko_lua.setup {
+        capabilities = capabilities,
+        on_attach = on_attach,
+        flags = {debounce_text_changes = 150},
+        settings = {
+            Lua = {
+                diagnostics = {
+                    -- Get the language server to recognize the `vim` global
+                    globals = {'vim', 'use'}
+                }
             }
         }
     }
-}
 
-nvim_lsp.efm.setup {
-    init_options = {documentFormatting = true},
-    settings = {
-        rootMarkers = {".git/"},
-        languages = {
-            lua = {{formatCommand = "lua-format -i", formatStdin = true}}
+    nvim_lsp.efm.setup {
+        init_options = {documentFormatting = true},
+        settings = {
+            rootMarkers = {".git/"},
+            languages = {
+                lua = {{formatCommand = "lua-format -i", formatStdin = true}}
+            }
         }
     }
-}
+end
