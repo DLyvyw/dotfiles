@@ -102,3 +102,4 @@ endif
 
 runtime keybindings.vim
 runtime commands.vim
+runtime highlight.vim

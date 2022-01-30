@@ -27,6 +27,14 @@ nvim_lsp.rust_analyzer.setup {
     flags = {debounce_text_changes = 150}
 }
 
+if vim.g.target_is_rpi then
+    nvim_lsp.clangd.setup {
+        capabilities = capabilities,
+        on_attach = on_attach,
+        flags = {debounce_text_changes = 150}
+    }
+end
+
 if not(vim.g.target_is_rpi) then
     nvim_lsp.gopls.setup {
         capabilities = capabilities,

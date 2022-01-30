@@ -96,6 +96,8 @@ require('packer').startup({function()
     -- fade inactive windows
     use {"TaDaa/vimade"}
 
+    use {"chentau/marks.nvim"}
+
 end,
 config = {
     opt_default = true,
@@ -169,10 +171,14 @@ then
 
     if not(vim.g.target_is_rpi) then
         vim.cmd [[packadd vimade]]
+        vim.cmd [[VimadeFadeLevel 0.8]]
     end
 
     vim.cmd [[packadd vim-vsnip]]
     vim.cmd [[packadd vim-vsnip-integ]]
     vim.cmd [[packadd which-key.nvim]]
     require('config.which_key')
+
+    vim.cmd [[packadd marks.nvim]]
+    require('config.marks')
 end
