@@ -57,7 +57,7 @@ if not(vim.g.target_is_rpi) then
     }
 
     nvim_lsp.efm.setup {
-        init_options = {documentFormatting = true},
+        init_options = {documentFormatting = false},
         settings = {
             rootMarkers = {".git/"},
             languages = {

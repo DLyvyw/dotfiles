@@ -189,3 +189,17 @@ else
     vnoremap <M-k> <Cmd>lua require("dapui").eval()<CR>
     noremap <M-k> <Cmd>lua require("dapui").eval()<CR>
 end
+
+if exists('g:neovide')
+    nnoremap <F11> :let g:neovide_fullscreen = !g:neovide_fullscreen<CR>
+end
+
+" trouble
+if exists('g:vscode')
+else
+    nnoremap <leader>xx <cmd>TroubleToggle<cr>
+    nnoremap <leader>xw <cmd>TroubleToggle workspace_diagnostics<cr>
+    nnoremap <leader>xd <cmd>TroubleToggle document_diagnostics<cr>
+    nnoremap <leader>xq <cmd>TroubleToggle quickfix<cr>
+    nnoremap <leader>xl <cmd>TroubleToggle loclist<cr>
+end

@@ -98,6 +98,10 @@ require('packer').startup({function()
 
     use {"chentau/marks.nvim"}
 
+    use {
+      "folke/lsp-trouble.nvim"
+    }
+
 end,
 config = {
     opt_default = true,
@@ -181,4 +185,7 @@ then
 
     vim.cmd [[packadd marks.nvim]]
     require('config.marks')
+
+    vim.cmd [[packadd lsp-trouble.nvim]]
+    require('config.trouble')
 end
