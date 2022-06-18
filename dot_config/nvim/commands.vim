@@ -18,7 +18,7 @@ command! EditPlugins :e ~/.config/nvim/lua/plugins.lua
 
 " auto commands
 if !exists('g:vscode')
-    autocmd TabNew * Telescope fd  
+   autocmd TabNew * Telescope fd  
 end
 
 "autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()

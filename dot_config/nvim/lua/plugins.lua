@@ -96,7 +96,7 @@ require('packer').startup({function()
     -- fade inactive windows
     use {"TaDaa/vimade"}
 
-    use {"chentau/marks.nvim"}
+    use {"chentoast/marks.nvim"}
 
     use {
       "folke/lsp-trouble.nvim"
@@ -138,8 +138,8 @@ then
     vim.cmd [[packadd gitsigns.nvim]]
     require('config.gitsigns')
 
-    vim.cmd [[packadd indent-blankline.nvim]]
-    require('config.indent_blankline')
+--    vim.cmd [[packadd indent-blankline.nvim]]
+--    require('config.indent_blankline')
 
     vim.cmd [[packadd lualine.nvim]]
     vim.cmd [[packadd lualine-lsp-progress]]
@@ -159,7 +159,7 @@ then
     vim.cmd [[packadd nvim-tree.lua]]
     require('config.nvim_tree')
 
-    vim.cmd [[packadd nvim-ts-rainbow]]
+    --vim.cmd [[packadd nvim-ts-rainbow]]
     vim.cmd [[packadd onedark.vim]]
     vim.cmd [[packadd rust-tools.nvim]]
     require('config.rust_tools')
