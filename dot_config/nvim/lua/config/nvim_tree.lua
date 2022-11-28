@@ -8,10 +8,6 @@ require'nvim-tree'.setup {
   open_on_tab         = false,
   hijack_cursor       = true,
   update_cwd          = true,
-  update_to_buf_dir   = {
-    enable = true,
-    auto_open = true,
-  },
   diagnostics = {
     enable = true,
     show_on_dirs = true,
@@ -42,10 +38,8 @@ require'nvim-tree'.setup {
   },
   view = {
     width = 30,
-    height = 30,
     hide_root_folder = false,
     side = 'left',
-    auto_resize = false,
     mappings = {
       custom_only = false,
       list = {}

@@ -174,8 +174,8 @@ then
     require('config.toggleterm')
 
     if not(vim.g.target_is_rpi) then
-        vim.cmd [[packadd vimade]]
-        vim.cmd [[VimadeFadeLevel 0.8]]
+--        vim.cmd [[packadd vimade]]
+--        vim.cmd [[VimadeFadeLevel 0.8]]
     end
 
     vim.cmd [[packadd vim-vsnip]]
